@@ -43,7 +43,8 @@ img{max-width:100%;display:block}
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:18px;
+  gap:12px 18px;
+  flex-wrap:wrap;
 }
 
 .brand{
@@ -51,6 +52,7 @@ img{max-width:100%;display:block}
   align-items:center;
   gap:10px;
   white-space:nowrap;
+  flex:0 0 auto;
 }
 
 .brand img{
@@ -69,11 +71,13 @@ img{max-width:100%;display:block}
 .menu{
   display:flex;
   align-items:center;
+  justify-content:flex-end;
   gap:4px;
-  overflow-x:auto;
-  scrollbar-width:none;
+  flex-wrap:wrap;
+  flex:1 1 auto;
+  margin-left:auto;
+  min-width:0;
 }
-.menu::-webkit-scrollbar{display:none}
 
 .menu button{
   border:0;
@@ -86,6 +90,7 @@ img{max-width:100%;display:block}
   font-size:14px;
   font-weight:600;
   transition:.2s ease;
+  flex:0 0 auto;
 }
 
 .menu button:hover,
@@ -533,17 +538,32 @@ footer p{
 [hidden]{display:none !important;}
 
 @media(max-width:820px){
-  .nav{min-height:68px}
-  .brand span{display:none}
-  .menu{flex:1;justify-content:flex-end}
-  .menu button{padding:9px 10px;font-size:13px}
-  .menu .join{padding-left:14px;padding-right:14px}
-  .hero{padding-top:40px}
-  .hero-inner{grid-template-columns:1fr;gap:38px;text-align:center}
-  .hero p{margin-left:auto;margin-right:auto}
-  .poster{width:min(290px,85%)}
-  .cards,.stats{grid-template-columns:1fr}
-  .panel{padding-top:62px}
-  .box{padding:32px 22px}
-  .timeline-item{grid-template-columns:1fr;gap:6px}
+  .nav{
+    min-height:68px;
+    align-items:center;
+    gap:10px;
+  }
+
+  .brand span{
+    display:none;
+  }
+
+  .menu{
+    flex:1;
+    justify-content:flex-start;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:4px;
+  }
+
+  .menu button{
+    flex:0 0 auto;
+    padding:9px 10px;
+    font-size:13px;
+  }
+
+  .menu .join{
+    padding-left:14px;
+    padding-right:14px;
+  }
 }
