@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Les P'tits Papillons — Course du 18 octobre 2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="#" id="brand-link">
+        <img src="logo.jpg" alt="Logo Les P'tits Papillons">
+        <span>Les P'tits Papillons</span>
+      </a>
+
+      <div class="menu" aria-label="Navigation principale">
+        <button data-panel="course" class="nav-btn">La course</button>
+        <button data-panel="infos" class="nav-btn">Infos pratiques</button>
+        <button data-panel="association" class="nav-btn">L'association</button>
+        <button data-panel="participer" class="join" id="join-btn">Je participe</button>
+      </div>
+    </nav>
+  </header>
+
+  <section id="accueil" class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Une course pas comme les autres</div>
+        <h1><span class="script">Les P'tits</span>Papillons</h1>
+        <div class="date">18 octobre 2026</div>
+        <p>
+          Une course imaginée avec douceur, énergie et solidarité.
+          Rejoignez-nous pour partager un beau moment ensemble.
+        </p>
+        <button class="btn gold" id="hero-join-btn">Je participe</button>
+      </div>
+
+      <img class="poster" src="affiche.png" alt="Affiche de la course Les P'tits Papillons">
+    </div>
+  </section>
+
+  <main>
+    <section id="course" class="panel">
+      <div class="section-title">
+        <div class="small">Ensemble, faisons battre nos ailes</div>
+        <h2>La course</h2>
+        <p class="intro">
+          Le principe de la course et toutes les informations essentielles,
+          présentés simplement.
+        </p>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <strong id="stat-participants">0</strong>
+          <span>participants</span>
+        </div>
+        <div class="stat">
+          <strong id="stat-km">0</strong>
+          <span>km parcourus</span>
+        </div>
+        <div class="stat">
+          <strong id="stat-objectif">2 000</strong>
+          <span>km objectif</span>
+        </div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-header">
+          <strong>Progression de l'objectif collectif</strong>
+          <span id="progress-text">0% atteint</span>
+        </div>
+        <div class="progress" aria-label="Progression de l'objectif">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon">🦋</div>
+          <h3>Une aventure collective</h3>
+          <p>Courir, marcher, encourager et partager cette journée ensemble.</p>
+        </article>
+        <article class="card">
+          <div class="icon">✦</div>
+          <h3>Un défi commun</h3>
+          <p>Chaque kilomètre compte et fait progresser l'objectif collectif.</p>
+        </article>
+        <article class="card">
+          <div class="icon">✧</div>
+          <h3>Le 18 octobre</h3>
+          <p>Rendez-vous le dimanche 18 octobre 2026 pour cette belle journée.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="infos" class="panel">
+      <div class="section-title">
+        <div class="small">Tout ce qu'il faut savoir</div>
+        <h2>Infos pratiques</h2>
+        <p class="intro">
+          Les horaires, le lieu, le parcours et les détails utiles avant de venir.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Où vous voulez</strong>
+          <p>Courez depuis chez vous.</p>
+        </div>
+        <div class="timeline-item">
+          <strong>Quand vous pouvez</strong>
+          <p>Peu importe l'horaire, tant que c'est le 18 octobre.</p>
+        </div>
+        <div class="timeline-item">
+          <strong>Ce que vous pouvez</strong>
+          <p>Un peu, beaucoup... La distance que vous pouvez !</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="association" class="panel">
+      <div class="section-title">
+        <div class="small">Les P'tits Papillons</div>
+        <h2>Qui sommes-nous ?</h2>
+        <p class="intro">
+          Découvrez l'association, son histoire, ses valeurs et les projets qu'elle porte.
+        </p>
+      </div>
+
+      <div class="box">
+        <p>
+          Elles se sont rencontrées lors de la Semaine Parlez-moi d'eux.
+          Aujourd'hui, elles ont créé une association.
+        </p>
+        <a class="btn" href="https://www.instagram.com/les.ptits_papillons/" target="_blank" rel="noopener">
+          Voir Instagram
+        </a>
+      </div>
+    </section>
+
+    <section id="participer" class="panel">
+      <div class="section-title">
+        <div class="small">Prêt à nous rejoindre ?</div>
+        <h2>Je participe</h2>
+        <p class="intro">
+          Une inscription simple, rapide et sans création de compte.
+        </p>
+      </div>
+
+      <div class="box">
+        <p>Quelques informations, une confirmation et c'est parti.</p>
+        <button class="btn gold" type="button" id="panel-join-btn">S'inscrire à la course</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="logo.jpg" alt="Les P'tits Papillons">
+    <strong>Les P'tits Papillons</strong>
+    <p>Course du 18 octobre 2026</p>
+    <p>Instagram · Contact · Mentions légales</p>
+  </footer>
+
+  <div id="modal-overlay" class="modal-overlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" id="modal-close-btn" aria-label="Fermer">×</button>
+
+      <div id="modal-form-view">
+        <h3 id="modal-title">Inscription à la course</h3>
+        <p class="modal-intro">Remplissez le formulaire pour participer 🦋</p>
+
+        <form id="participation-form" novalidate>
+          <div class="form-row">
+            <label for="nom">Nom</label>
+            <input id="nom" name="nom" type="text" maxlength="80" autocomplete="family-name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="prenom">Prénom</label>
+            <input id="prenom" name="prenom" type="text" maxlength="80" autocomplete="given-name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="typeCourse">Type de course</label>
+            <select id="typeCourse" name="typeCourse" required>
+              <option value="">Sélectionnez</option>
+              <option value="Course">Course</option>
+              <option value="Marche">Marche</option>
+              <option value="Vélo">Vélo</option>
+              <option value="Relais">Relais</option>
+              <option value="Autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="distance">Distance (km)</label>
+            <input id="distance" name="distance" type="number" min="0.1" max="100" step="0.1" required>
+          </div>
+
+          <div class="hp-wrap" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn gold" id="submit-btn">Valider</button>
+          </div>
+
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div id="modal-success-view" hidden>
+        <div class="success-box">
+          <div class="emoji">✨</div>
+          <h3>Merci pour votre participation</h3>
+          <p>Votre inscription a bien été enregistrée.</p>
+          <p>Retour vers l'accueil en cours…</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
