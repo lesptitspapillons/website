@@ -13,7 +13,6 @@
   --info:#6b5c2c;
 }
 
-*{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   margin:0;
@@ -59,6 +58,12 @@ img{max-width:100%;display:block}
   width:48px;
   height:48px;
   border-radius:50%;
+  object-fit:cover;
+}
+
+.brand2 img{
+  width:250;
+  height:250px;
   object-fit:cover;
 }
 
@@ -111,7 +116,7 @@ img{max-width:100%;display:block}
 }
 
 .hero{
-  min-height:460px;
+  min-height:250px;
   display:grid;
   place-items:center;
   padding:55px 20px 65px;
@@ -124,7 +129,6 @@ img{max-width:100%;display:block}
 }
 
 .hero:before{
-  content:"✦";
   position:absolute;
   left:8%;
   top:45px;
@@ -133,7 +137,6 @@ img{max-width:100%;display:block}
 }
 
 .hero:after{
-  content:"✧";
   position:absolute;
   right:9%;
   bottom:55px;
@@ -242,18 +245,10 @@ h2{
   color:var(--muted);
 }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.card{
-  padding:30px 26px;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.72);
-  border-radius:24px;
-  box-shadow:0 10px 30px rgba(79,61,20,.06);
+.intro a{
+  color:var(--gold-dark);
+  font-weight:600;
+  text-decoration:underline;
 }
 
 .icon{
@@ -262,16 +257,6 @@ h2{
   margin-bottom:10px;
 }
 
-.card h3{
-  margin:0 0 7px;
-  font-family:"Cormorant Garamond",serif;
-  font-size:28px;
-}
-
-.card p{
-  margin:0;
-  color:var(--muted);
-}
 
 .stats{
   display:grid;
@@ -301,56 +286,11 @@ h2{
   color:var(--muted);
 }
 
-.progress-wrap{
-  max-width:760px;
-  margin:0 auto 38px;
-  background:#fffdf8;
-  border:1px solid var(--line);
-  border-radius:24px;
-  padding:20px;
-  box-shadow:0 10px 30px rgba(79,61,20,.06);
-}
-
-.progress-header{
-  display:flex;
-  justify-content:space-between;
-  gap:16px;
-  align-items:center;
-  margin-bottom:12px;
-  flex-wrap:wrap;
-}
-
-.progress-header strong{font-size:16px}
-.progress-header span{color:var(--muted);font-size:14px}
-
-.progress{
-  width:100%;
-  height:16px;
-  background:#f2ead2;
-  border-radius:999px;
-  overflow:hidden;
-  position:relative;
-}
-
-.progress-bar{
-  height:100%;
-  width:0%;
-  background:linear-gradient(90deg,var(--gold),#e2c56d);
-  border-radius:999px;
-  transition:width .6s ease;
-}
-
 .box{
   max-width:760px;
   margin:auto;
-  background:#fffdf8;
-  border-radius:30px;
-  padding:40px;
-  box-shadow:var(--shadow);
   text-align:center;
 }
-
-.box p{color:var(--muted)}
 
 .btn{
   display:inline-flex;

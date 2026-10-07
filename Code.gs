@@ -8,7 +8,6 @@
 const CONFIG = {
   SHEET_NAME: 'Inscriptions',
   LOG_SHEET_NAME: 'Logs',
-  OBJECTIF_KM: 2000,
   MIN_DISTANCE: 0.1,
   MAX_DISTANCE: 200,
   MIN_FORM_OPEN_MS: 2500,
@@ -149,7 +148,6 @@ const StatsService = {
    * Lit toutes les inscriptions et calcule :
    * - nombre de participants
    * - distance totale
-   * - objectif
    */
   getStats() {
     const sheet = SpreadsheetService.getOrCreateSheet(CONFIG.SHEET_NAME);
@@ -160,7 +158,6 @@ const StatsService = {
         success: true,
         participants: 0,
         totalDistance: 0,
-        objectif: CONFIG.OBJECTIF_KM
       };
     }
 
@@ -184,7 +181,6 @@ const StatsService = {
       success: true,
       participants: participants,
       totalDistance: NumberUtils.round1(totalDistance),
-      objectif: CONFIG.OBJECTIF_KM
     };
   }
 };

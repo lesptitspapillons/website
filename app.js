@@ -71,10 +71,7 @@
 
     // Statistiques
     statParticipants: document.getElementById('stat-participants'),
-    statKm: document.getElementById('stat-km'),
-    statObjectif: document.getElementById('stat-objectif'),
-    progressBar: document.getElementById('progress-bar'),
-    progressText: document.getElementById('progress-text')
+    statKm: document.getElementById('stat-km')
   };
 
   /**
@@ -374,7 +371,6 @@
      *   success: true,
      *   participants: number,
      *   totalDistance: number,
-     *   objectif: number
      * }
      */
     async fetchStats() {
@@ -408,25 +404,9 @@
    * ------------------------------------------------------------
    * Ce bloc se charge de :
    * - traduire les données API en affichage visuel
-   * - mettre à jour compteurs + barre de progression
    * ============================================================
    */
   const Stats = {
-    /**
-     * Met à jour la barre de progression en fonction
-     * de la distance totale parcourue et de l’objectif.
-     */
-    updateProgressBar(totalDistance, objectifKm) {
-      const safeObjectif = Number(objectifKm || CONFIG.DEFAULT_OBJECTIF_KM);
-      const safeDistance = Number(totalDistance || 0);
-
-      const percent = safeObjectif > 0
-        ? Math.min((safeDistance / safeObjectif) * 100, 100)
-        : 0;
-
-      DOM.progressBar.style.width = `${percent}%`;
-      DOM.progressText.textContent = `${percent.toFixed(1).replace('.', ',')}% atteint`;
-    },
 
     /**
      * Met à jour les 3 blocs statistiques visibles dans la page.
@@ -434,13 +414,10 @@
     render(data) {
       const participants = Number(data.participants || 0);
       const totalDistance = Number(data.totalDistance || 0);
-      const objectif = Number(data.objectif || CONFIG.DEFAULT_OBJECTIF_KM);
 
       DOM.statParticipants.textContent = Utils.formatNumberFR(participants);
       DOM.statKm.textContent = Utils.formatNumberFR(totalDistance);
-      DOM.statObjectif.textContent = Utils.formatNumberFR(objectif);
 
-      this.updateProgressBar(totalDistance, objectif);
     },
 
     /**
