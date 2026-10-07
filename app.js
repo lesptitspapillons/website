@@ -10,13 +10,13 @@
    * ============================================================
    */
   const CONFIG = {
-    API_URL: 'https://script.google.com/macros/s/AKfycbzSGZamk0aMLRsUM0J5BuHLj63c26HrqtXT1q21jNrmQRkhN3cZuZP1rhoTTjIa9lhm/exec',
+    API_URL: 'https://script.google.com/macros/s/AKfycbzEsyr5g1TAmz0pXmuw1R43qkiKkgXVYb3wI7TuH9i8quNKTTDdYHr8J8-E6nQ18LMV/exec',
     DEFAULT_OBJECTIF_KM: 2000,
     REQUEST_TIMEOUT_MS: 10000,
     MIN_FORM_OPEN_MS: 2500,
     MIN_DISTANCE_KM: 0.1,
     MAX_DISTANCE_KM: 100,
-    ALLOWED_RACE_TYPES: ['Course', 'Marche', 'Vélo', 'Relais', 'Autre']
+    ALLOWED_RACE_TYPES: ['Course', 'Marche', 'Autre']
   };
 
   /**
