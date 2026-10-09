@@ -215,12 +215,8 @@ const ValidationService = {
       return { valid: false, message: 'Soumission rejetée' };
     }
 
-    if (!nom || !prenom || !typeCourse) {
+    if (!typeCourse) {
       return { valid: false, message: 'Champs obligatoires manquants' };
-    }
-
-    if (nom.length < 2 || prenom.length < 2) {
-      return { valid: false, message: 'Nom ou prénom trop court' };
     }
 
     if (nom.length > CONFIG.MAX_NAME_LENGTH || prenom.length > CONFIG.MAX_NAME_LENGTH) {
@@ -393,6 +389,6 @@ const NumberUtils = {
    * Arrondit à 1 décimale.
    */
   round1(value) {
-    return Math.round(Number(value || 0) * 10) / 10;
+    return Math.round(Number(value || 0) * 100) / 100;
   }
 };

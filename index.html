@@ -16,7 +16,7 @@
   <header class="topbar">
     <nav class="nav">
       <a class="brand" href="#" id="brand-link">
-        <img src="logo.jpg" alt="Logo Les P'tits Papillons">
+        <img src="img/logo.jpg" alt="Logo Les P'tits Papillons">
         <span>Les P'tits Papillons</span>
       </a>
 
@@ -37,7 +37,7 @@
         <p>🦋 Association pour soutenir la visibilité du deuil périnatal. 
           <br/>✨️ Parce que chaque bébé a existé et que l'amour ne meurt jamais.</p>
       </div>
-      <div class="brand2"><img src="logo.jpg" alt="Logo Les P'tits Papillons"></div>
+      <div class="brand2"><img src="img/logo.jpg" alt="Logo Les P'tits Papillons"></div>
       
     </div>
   </section>
@@ -61,7 +61,9 @@
 A très vite pour ce moment riche en émotions et en amour partagé 🤍
         </p>
         <br/>
-        <button data-panel="participer" class="join" id="join-btn">Je participe</button>
+        <div class="box">
+          <button data-panel="participer" class="join" id="join-btn">Je participe, je rentre mon nombre de kilomètres</button>
+        </div>
       </div>
 
       <div class="stats">
@@ -78,10 +80,10 @@ A très vite pour ce moment riche en émotions et en amour partagé 🤍
       <br/>
       <div class="section-title">
         <div class="small">Remerciements</div>
-        <p>Merci à tous les participants qui se sont enregistrés ici : ...</p>
+        <p>Merci à tous les participants qui se sont enregistrés ici</p>
       </div>
 
-      <img src="affiche.png" alt="Course connectée du 18.10.2026" class="affiche">
+      <img src="img/affiche.png" alt="Course connectée du 18.10.2026" class="affiche">
 
     </section>
 
@@ -89,20 +91,11 @@ A très vite pour ce moment riche en émotions et en amour partagé 🤍
       <div class="section-title">
         <h2>Contacts</h2>
       </div>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <strong>Où vous voulez</strong>
-          <p>Courez depuis chez vous.</p>
-        </div>
-        <div class="timeline-item">
-          <strong>Quand vous pouvez</strong>
-          <p>Peu importe l'horaire, tant que c'est le 18 octobre.</p>
-        </div>
-        <div class="timeline-item">
-          <strong>Ce que vous pouvez</strong>
-          <p>Un peu, beaucoup... La distance que vous pouvez !</p>
-        </div>
+      <div class="contact-logos">
+        <a href="https://www.instagram.com/les.ptits_papillons/" target="_blank" rel="noopener"><img src="img/logo_insta.png" alt="Instagram" class="contact-img"></a>
+        <a href="https://fb.me/e/5arysHacx" target="_blank" rel="noopener"><img src="img/logo_fb.png" alt="Facebook" class="contact-img"></a>
+        <a href="https://strava.app.link/KJ7ebuTPF6b" target="_blank" rel="noopener"><img src="img/logo_strava.png" alt="Strava" class="contact-img"></a>
+        <a href="mailto:lesptitspap@gmail.com"><img src="img/logo_mail.png" alt="Email" class="contact-img"></a>
       </div>
     </section>
 
@@ -153,7 +146,7 @@ A très vite pour ce moment riche en émotions et en amour partagé 🤍
   </main>
 
   <footer>
-    <img src="logo.jpg" alt="Les P'tits Papillons">
+    <img src="img/logo.jpg" alt="Les P'tits Papillons">
     <strong>Les P'tits Papillons</strong>
     <p>Association de deuil périnatal</p>
   </footer>
@@ -169,16 +162,16 @@ A très vite pour ce moment riche en émotions et en amour partagé 🤍
         <form id="participation-form" novalidate>
           <div class="form-row">
             <label for="nom">Nom</label>
-            <input id="nom" name="nom" type="text" maxlength="80" autocomplete="family-name" required>
+            <input id="nom" name="nom" type="text" maxlength="80" autocomplete="family-name">
           </div>
 
           <div class="form-row">
             <label for="prenom">Prénom</label>
-            <input id="prenom" name="prenom" type="text" maxlength="80" autocomplete="given-name" required>
+            <input id="prenom" name="prenom" type="text" maxlength="80" autocomplete="given-name">
           </div>
 
           <div class="form-row">
-            <label for="typeCourse">Type de course</label>
+            <label for="typeCourse">Type de course *</label>
             <select id="typeCourse" name="typeCourse" required>
               <option value="">Sélectionnez</option>
               <option value="Course">Course</option>
@@ -188,8 +181,8 @@ A très vite pour ce moment riche en émotions et en amour partagé 🤍
           </div>
 
           <div class="form-row">
-            <label for="distance">Distance (km)</label>
-            <input id="distance" name="distance" type="number" min="0.1" max="100" step="0.1" required>
+            <label for="distance">Distance (km) *</label>
+            <input id="distance" name="distance" type="number" min="0.1" max="100" step="0.01" required>
           </div>
 
           <div class="hp-wrap" aria-hidden="true">

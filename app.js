@@ -10,12 +10,11 @@
    * ============================================================
    */
   const CONFIG = {
-    API_URL: 'https://script.google.com/macros/s/AKfycbzEsyr5g1TAmz0pXmuw1R43qkiKkgXVYb3wI7TuH9i8quNKTTDdYHr8J8-E6nQ18LMV/exec',
-    DEFAULT_OBJECTIF_KM: 2000,
-    REQUEST_TIMEOUT_MS: 10000,
-    MIN_FORM_OPEN_MS: 2500,
+    API_URL: 'https://script.google.com/macros/s/AKfycbwXqHCFHatEYh5aWXG1vmQMVoXrmjk41cduNuRsXFLXRslSDSFTJqanRHMcfYrXpear/exec',
+    REQUEST_TIMEOUT_MS: 20000,
+    MIN_FORM_OPEN_MS: 2000,
     MIN_DISTANCE_KM: 0.1,
-    MAX_DISTANCE_KM: 100,
+    MAX_DISTANCE_KM: 200,
     ALLOWED_RACE_TYPES: ['Course', 'Marche', 'Autre']
   };
 
@@ -99,7 +98,7 @@
     formatNumberFR(value) {
       return new Intl.NumberFormat('fr-FR', {
         minimumFractionDigits: Number(value) % 1 !== 0 ? 1 : 0,
-        maximumFractionDigits: 1
+        maximumFractionDigits: 12
       }).format(Number(value || 0));
     },
 
@@ -321,12 +320,8 @@
      * - un message d’erreur sinon
      */
     validate(payload) {
-      if (!payload.nom || !payload.prenom || !payload.typeCourse) {
-        return 'Merci de remplir tous les champs.';
-      }
-
-      if (payload.nom.length < 2 || payload.prenom.length < 2) {
-        return 'Le nom et le prénom doivent contenir au moins 2 caractères.';
+      if (!payload.typeCourse) {
+        return 'Merci de remplir tous les champs obligatoires.';
       }
 
       if (!CONFIG.ALLOWED_RACE_TYPES.includes(payload.typeCourse)) {
