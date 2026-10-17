@@ -397,7 +397,7 @@ footer p{
   width:min(560px,100%);
   background:#fffdf8;
   border-radius:24px;
-  padding:28px 24px;
+  padding:10px 10px;
   box-shadow:0 24px 60px rgba(0,0,0,.18);
   position:relative;
   border:1px solid var(--line);
@@ -423,8 +423,8 @@ footer p{
 
 .modal-close{
   position:absolute;
-  top:10px;
-  right:12px;
+  top:20px;
+  right:24px;
   border:0;
   background:transparent;
   font-size:30px;
@@ -452,7 +452,7 @@ footer p{
   border:1px solid var(--line);
   background:#fff;
   border-radius:14px;
-  padding:13px 14px;
+  padding:5px 10px;
   font:inherit;
   color:var(--ink);
 }
