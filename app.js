@@ -491,8 +491,8 @@
         // Puis on ferme la modale et on remet l’UI dans son état initial
         setTimeout(() => {
           Modal.showFormView();
-          Modal.close();
           FormUI.unlock();
+          Modal.close();
           Navigation.goHome();
         }, 1800);
 
