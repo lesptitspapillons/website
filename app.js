@@ -541,11 +541,12 @@
       });
 
       // Boutons ouvrant la modale
-      [DOM.joinBtn, DOM.heroJoinBtn, DOM.panelJoinBtn].forEach(button => {
+      // Désactivation du bouton
+      /*[DOM.joinBtn, DOM.heroJoinBtn, DOM.panelJoinBtn].forEach(button => {
         if (button) {
           button.addEventListener('click', () => Modal.open());
         }
-      });
+      });*/
 
       // Fermeture modale via bouton
       DOM.modalCloseBtn.addEventListener('click', () => Modal.close());
