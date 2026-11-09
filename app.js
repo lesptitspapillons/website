@@ -540,6 +540,47 @@
         });
       });
 
+      DOM.menuButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const dropdown = button.closest('.nav-dropdown');
+
+          if (dropdown) {
+              dropdown.classList.add('menu-closed');
+          }
+        });
+      });
+
+      document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+        dropdown.addEventListener('mouseenter', () => {
+          dropdown.classList.remove('menu-closed');
+        });
+      });
+
+
+      // Gestion des menus déroulants sur mobile
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+
+    const toggle = dropdown.querySelector(':scope > button');
+
+    if (!toggle) return;
+
+    toggle.addEventListener('click', event => {
+
+        if (window.matchMedia('(max-width: 820px)').matches) {
+            event.preventDefault();
+
+            dropdown.classList.toggle('is-open');
+        }
+    });
+
+    // Fermeture après sélection d'une édition
+    dropdown.querySelectorAll('.nav-submenu button').forEach(button => {
+        button.addEventListener('click', () => {
+            dropdown.classList.remove('is-open');
+        });
+    });
+});
+
       // Boutons ouvrant la modale
       // Désactivation du bouton
       /*[DOM.joinBtn, DOM.heroJoinBtn, DOM.panelJoinBtn].forEach(button => {

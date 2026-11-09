@@ -22,8 +22,32 @@
 
       <div class="menu" aria-label="Navigation principale">
         <button data-panel="association" class="nav-btn">L'association</button>
-        <button data-panel="course" class="nav-btn">Course connectée</button>
-        <button data-panel="relais" class="nav-btn">Relais de lumière</button>
+        <div class="nav-dropdown">
+          <button type="button" aria-haspopup="true">
+            Course connectée <span class="dropdown-caret">▾</span>
+          </button>
+          <div class="nav-submenu">
+            <button type="button" data-panel="course2026" class="nav-btn">
+              Edition 2026
+            </button>
+            <button type="button" data-panel="course2027" class="nav-btn">
+              Edition 2027
+            </button>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button type="button" aria-haspopup="true">
+            Relais de lumière <span class="dropdown-caret">▾</span>
+          </button>
+          <div class="nav-submenu">
+            <button type="button" data-panel="relais1" class="nav-btn">
+              Vague du 15 octobre 2026
+            </button>
+            <button type="button" data-panel="relais2" class="nav-btn">
+              Fêtes de fin d'années 2026
+            </button>
+          </div>
+        </div>
         <button data-panel="contact" class="nav-btn">Nous contacter</button>
         <button> <a class="btn" href="https://www.helloasso.com/associations/les-p-tits-papillons/formulaires/1" target="_blank" rel="noopener">Faire un don</a> </button>
         <button> <a class="btn yellow" href="https://www.helloasso.com/associations/les-p-tits-papillons/adhesions/adhesion-2027" target="_blank" rel="noopener">Devenir adhérent</a> </button>
@@ -44,27 +68,20 @@
   </section>
 
   <main>
-    <section id="course" class="panel">
+    <section id="course2026" class="panel">
       <div class="section-title">
-        <div class="small">Save the date : Dimanche 18 octobre 2026</div>
-        <h2>Course ou marche connectée</h2>
+        <div class="small">Dimanche 18 octobre 2026</div>
+        <h2>Retour sur la première édition – Papillons vers les étoiles</h2>
         <p class="intro">
-          Où que vous habitiez, rejoignez le 18 octobre la course/marche connectée pour rendre hommage et soutenir les familles touchées par le deuil périnatal ✨️
+          Le 18 octobre 2026, la première édition de « Papillons vers les étoiles » a rassemblé plus de 300 participants de différents horizons autour d'une course et marche connectée, organisée partout en France mais aussi en Angleterre, en Allemagne et en Belgique. 
           <br/><br/>
-          L'idée ? Marcher, courir, chacun(e) à son rythme et cumuler ensemble les kilomètres 🦋
+          À leur rythme, en marchant ou en courant, chacun a contribué à cette mobilisation collective en faveur de la reconnaissance du deuil périnatal et du soutien aux familles concernées. 
           <br/><br/>
-          Pour cela, deux propositions : 
-          <br/>
-          - Vous inscrire grâce à <a href="https://forms.registration4all.com/EventRegistration/Register_Sport_Event.aspx?EventID=232485&RORG=OW" target="_blank">ce lien</a> pour obtenir votre dossard
-          <br/>
-          - Rejoindre si vous le souhaitez l'événement "Les papillons vers les étoiles" de notre groupe "Les p'tits papillons" sur <a href="https://strava.app.link/KJ7ebuTPF6b" target="_blank">l'application strava</a>, pour partager ce moment et créer une grande chaîne de soutien 🏃‍♀️
-          <br/><br/><br/>
-Merci à tous les participants ayant rejoint la course connectée, votre participation a fait la réussite de cet événement 🤍 Cet événement est terminé, il n'est plus possible d'inscrire ses kilomètres.
+          Cette première édition a permis de donner de la visibilité à cette cause, de créer une dynamique solidaire et de transformer chaque kilomètre parcouru en un geste de soutien. Un grand merci à l'ensemble des participants et des soutiens qui ont contribué à faire de cette première édition une réussite. 
+          <br/><br/>
+          Nous vous attendons encore plus nombreux l'année prochaine ! Rendez-vous en Octobre 2027 pour la prochaine édition.
         </p>
         <br/>
-        <div class="box">
-          <button data-panel="participer" class="join" id="join-btn" disabled>Je participe, je rentre mon nombre de kilomètres</button>
-        </div>
       </div>
 
       <div class="stats">
@@ -79,13 +96,21 @@ Merci à tous les participants ayant rejoint la course connectée, votre partici
       </div>
 
       <br/>
+
+      <img src="img/papillon_course_2026.jpg" alt="Pour nos bébés" class="affiche">
+      <p class="intro">
+        <video width="320" height="180" controls>
+          <source src="medias/video_course_2026.mp4" type="video/mp4">
+            Votre navigateur ne prend pas en charge la lecture de vidéos.
+        </video>
+      </p>
+      
+
+    </section>
+
+    <section id="course2027" class="panel">
       <div class="section-title">
-        <div class="small">Remerciements</div>
-        <p>Merci à tous les participants qui se sont enregistrés ici</p>
-      </div>
-
-      <img src="img/affiche.png" alt="Course connectée du 18.10.2026" class="affiche">
-
+        <div class="small">Save the date : Dimanche 17 octobre 2027</div>
     </section>
 
     <section id="contact" class="panel">
@@ -101,22 +126,30 @@ Merci à tous les participants ayant rejoint la course connectée, votre partici
     </section>
 
 
-    <section id="relais" class="panel">
+    <section id="relais1" class="panel">
       <div class="section-title">
-        <div class="small">Save the date : Jeudi 15 octobre 2026</div>
+        <div class="small">Jeudi 15 octobre 2026</div>
         <h2>Relais de lumière</h2>
         <p class="intro">
-          A l'occasion de la journée de sensibilisation au deuil périnatal, on vous propose de rejoindre un relais de lumière le 15 octobre ✨️
-          <br/><br/>
-          L'objectif ? Mettre en lumière toutes nos étoiles parties trop tôt, où que vous habitiez et sous la forme que vous souhaitez 🕯
-          <br/><br/>
-          Merci à tous les participants ayant rejoint le relais de lumière et pour ce moment d'émotion et de partage 🤍
-          <br/><br/>
+          À l'occasion de la Journée de sensibilisation au deuil périnatal, Les P'tits Papillons ont organisé un Relais de lumière, une initiative ouverte à tous pour rendre hommage aux bébés partis trop tôt et témoigner de notre soutien aux familles concernées. Le principe : faire vivre un moment de recueillement et de partage, où que l'on soit, en allumant une bougie ou en participant selon la forme de son choix. La première édition, organisée le 15 octobre, a mobilisé de nombreux participants autour de cette démarche symbolique et solidaire. 
+        <br/><br/>
+          Rendez-vous en décembre pour une nouvelle édition !
+        <br/><br/>
+        Nous vous invitons dès à présent à rejoindre ce mouvement collectif. Que vous soyez une famille, un proche, un professionnel ou simplement sensible à cette cause, chacun peut participer à sa manière et contribuer à faire rayonner cette initiative.
+        <br/><br/>
+        Ensemble, faisons briller nos lumières et donnons de la visibilité au deuil périnatal.
+        <br/><br/>
           <video width="320" height="180" controls>
             <source src="medias/video_relais_lumiere.mp4" type="video/mp4">
                 Votre navigateur ne prend pas en charge la lecture de vidéos.
           </video>
         </p>
+      </div>
+    </section>
+
+    <section id="relais2" class="panel">
+      <div class="section-title">
+        <div class="small">Save the date : Noël 2026</div>
       </div>
     </section>
 
