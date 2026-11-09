@@ -359,6 +359,11 @@ h2{
 .btn.gold{background:var(--gold)}
 .btn[disabled]{opacity:.6;cursor:not-allowed;transform:none}
 
+.yellow{
+  background:var(--gold);
+  color:#fff;
+}
+
 footer{
   padding:42px 20px;
   background:#24282b;
